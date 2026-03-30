@@ -1,0 +1,30 @@
+# === Machine-specific / Ephemeral ===
+projects/
+sessions/
+session-env/
+debug/
+file-history/
+shell-snapshots/
+tasks/
+todos/
+plans/
+
+# === Managed by plugin/skill system (reinstall on each host) ===
+plugins/
+skills/
+
+# === Cache / Telemetry ===
+cache/
+paste-cache/
+statsig/
+telemetry/
+backups/
+
+# === Sensitive / Machine-specific state ===
+history.jsonl
+stats-cache.json
+mcp-needs-auth-cache.json
+
+# === Empty directories (top-level only) ===
+/rules/
+/ide/

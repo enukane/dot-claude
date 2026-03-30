@@ -1,0 +1,142 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git show:*)",
+      "Bash(git branch:*)",
+      "Bash(git stash:*)",
+      "Bash(git fetch:*)",
+      "Bash(git pull:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git checkout:*)",
+      "Bash(git switch:*)",
+      "Bash(git merge:*)",
+      "Bash(git rebase:*)",
+      "Bash(git tag:*)",
+      "Bash(git push:*)",
+      "Bash(git worktree:*)",
+      "Bash(git remote:*)",
+      "Bash(git cherry-pick:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(git config:*)",
+      "Bash(gh :*)",
+      "Bash(npm :*)",
+      "Bash(npx :*)",
+      "Bash(node :*)",
+      "Bash(go :*)",
+      "Bash(python3 :*)",
+      "Bash(python :*)",
+      "Bash(pip :*)",
+      "Bash(pip3 :*)",
+      "Bash(conda :*)",
+      "Bash(cargo :*)",
+      "Bash(rustc :*)",
+      "Bash(terraform plan:*)",
+      "Bash(terraform fmt:*)",
+      "Bash(terraform init:*)",
+      "Bash(terraform validate:*)",
+      "Bash(terraform show:*)",
+      "Bash(terraform output:*)",
+      "Bash(latexmk :*)",
+      "Bash(pdflatex :*)",
+      "Bash(lualatex :*)",
+      "Bash(xelatex :*)",
+      "Bash(bibtex :*)",
+      "Bash(biber :*)",
+      "Bash(chktex :*)",
+      "Bash(make:*)",
+      "Bash(cmake:*)",
+      "Bash(ls:*)",
+      "Bash(pwd:*)",
+      "Bash(which :*)",
+      "Bash(cat :*)",
+      "Bash(head :*)",
+      "Bash(tail :*)",
+      "Bash(wc :*)",
+      "Bash(sort :*)",
+      "Bash(diff :*)",
+      "Bash(find :*)",
+      "Bash(mkdir :*)",
+      "Bash(cp :*)",
+      "Bash(mv :*)",
+      "Bash(touch :*)",
+      "Bash(chmod :*)",
+      "Bash(jq :*)",
+      "Bash(curl :*)",
+      "Bash(echo :*)",
+      "Bash(date:*)",
+      "Bash(env:*)",
+      "Bash(test :*)",
+      "Bash(true:*)",
+      "Bash(false:*)",
+      "Bash([ :*)",
+      "Bash(grep :*)",
+      "Bash(rg :*)",
+      "Bash(sed :*)",
+      "Bash(awk :*)",
+      "Bash(xargs :*)",
+      "Bash(tee :*)",
+      "Bash(realpath :*)",
+      "Bash(dirname :*)",
+      "Bash(basename :*)"
+    ],
+    "deny": [
+      "Bash(rm -rf /:*)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(git clean -f:*)",
+      "Bash(terraform destroy:*)"
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.js"
+  },
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true,
+    "document-skills@anthropic-agent-skills": true
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/post-edit.sh",
+            "timeout": 10,
+            "statusMessage": "検証中..."
+          }
+        ]
+      }
+    ]
+  },
+  "outputStyle": "Explanatory",
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "考え中",
+      "調査中",
+      "分析中",
+      "設計中",
+      "構築中",
+      "検証中",
+      "最適化中",
+      "探索中",
+      "推論中",
+      "整理中"
+    ]
+  },
+  "language": "ja",
+  "alwaysThinkingEnabled": true,
+  "feedbackSurveyState": {
+    "lastShownTime": 1753935853234
+  }
+}
